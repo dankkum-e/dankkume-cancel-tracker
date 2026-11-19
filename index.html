@@ -85,9 +85,10 @@ tr.sum td{font-weight:700;background:var(--soft);border-bottom:0}
 tr.sub td{color:var(--muted);background:color-mix(in srgb,var(--soft) 50%,transparent)}
 tr.click{cursor:pointer}
 /* 매출 대비 표: 전체 / 자사 / 외부 채널 구분선 */
-.salestbl tr.g th:nth-child(3),.salestbl tr.g th:nth-child(4),
-.salestbl tr:not(.g) th:nth-child(5),.salestbl tr:not(.g) th:nth-child(8),
-.salestbl td:nth-child(5),.salestbl td:nth-child(8){border-left:1px solid var(--line-strong)}
+.salestbl tbody tr:not(.sum) td:nth-child(5),.salestbl tbody tr:not(.sum) td:nth-child(8){background:linear-gradient(var(--line),var(--line)) left center/1px calc(100% - 16px) no-repeat}
+/* 구분선이 두 숫자 사이 가운데 오도록: 선 앞뒤 여백을 같게 */
+.salestbl td:nth-child(4),.salestbl td:nth-child(7),.salestbl tr:not(.g) th:nth-child(4),.salestbl tr:not(.g) th:nth-child(7){padding-right:22px}
+.salestbl td:nth-child(5),.salestbl td:nth-child(8),.salestbl tr:not(.g) th:nth-child(5),.salestbl tr:not(.g) th:nth-child(8){width:1%;padding-left:22px}
 tr.click:hover td{background:var(--accent-soft)}
 td .ib{display:inline-block;height:8px;border-radius:4px;background:var(--own);vertical-align:middle;margin-left:8px}
 td.wrap{white-space:normal;min-width:180px}
